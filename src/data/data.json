@@ -1,0 +1,165 @@
+{
+  "Header": {
+    "title": "Advanced surgical drapes",
+    "paragraph": "We work to create the drapes and drape kits for varied surgical procedures. We are committed to providing quality products and products that exceeds our customers' expectations."
+  },
+  "About": {
+    "paragraph": "Surgencia is a leading provider of surgical drapes and customized drape kits, serving hospitals, clinics, and healthcare professionals worldwide. With a commitment to innovation and patient safety, we deliver solutions that enhance sterile practices and streamline medical procedures.",
+    "Why": [
+      "High-quality materials compliant with international standards",
+      "Customizable kits tailored to different procedures"
+    ],
+    "Why2": [
+      "Cost-effective solutions for hospitals and clinics",
+      "Dedicated to safety, comfort, and sustainability"
+    ]
+  },
+  "Gallery": [
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/01-large.jpg",
+      "smallImage": "img/portfolio/01-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/02-large.jpg",
+      "smallImage": "img/portfolio/02-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/03-large.jpg",
+      "smallImage": "img/portfolio/03-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/04-large.jpg",
+      "smallImage": "img/portfolio/04-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/05-large.jpg",
+      "smallImage": "img/portfolio/05-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/06-large.jpg",
+      "smallImage": "img/portfolio/06-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/07-large.jpg",
+      "smallImage": "img/portfolio/07-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/08-large.jpg",
+      "smallImage": "img/portfolio/08-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/09-large.jpg",
+      "smallImage": "img/portfolio/09-small.jpg"
+    }
+  ],
+  "Products": [
+    {
+      "icon": "fa fa-wordpress",
+      "name": "Surgical Drapes",
+      "text": "Designed for maximum barrier protection and fluid control. Available in a wide range of sizes and materials."
+    },
+    {
+      "icon": "fa fa-cart-arrow-down",
+      "name": "Procedure Drape Kits",
+      "text": "Pre-packed, sterile kits for specific procedures (orthopedic, cardiac, ophthalmic, gynecological, etc.) Saves preparation time and improves efficiency."
+    },
+    {
+      "icon": "fa fa-cloud-download",
+      "name": "Custom Solutions",
+      "text": "Tailor-made drapes and kits designed in collaboration with healthcare professionals."
+    }
+  ],
+  "Testimonials": [
+    {
+      "img": "img/testimonials/01.jpg",
+      "text": "\"We ordered the specific drape kit and it proved to be very good and of excellent quality\"",
+      "name": "John Doe"
+    },
+    {
+      "img": "img/testimonials/02.jpg",
+      "text": "\"We ordered the specific drape kit and it proved to be very good and of excellent quality\"",
+      "name": "Johnathan Doe"
+    },
+    {
+      "img": "img/testimonials/03.jpg",
+      "text": "\"We ordered the specific drape kit and it proved to be very good and of excellent quality\"",
+      "name": "John Doe"
+    },
+    {
+      "img": "img/testimonials/04.jpg",
+      "text": "\"We ordered the specific drape kit and it proved to be very good and of excellent quality\"",
+      "name": "Johnathan Doe"
+    },
+    {
+      "img": "img/testimonials/05.jpg",
+      "text": "\"We ordered the specific drape kit and it proved to be very good and of excellent quality\"",
+      "name": "John Doe"
+    },
+    {
+      "img": "img/testimonials/06.jpg",
+      "text": "\"We ordered the specific drape kit and it proved to be very good and of excellent quality\"",
+      "name": "Johnathan Doe"
+    }
+  ],
+  "Team": [
+    {
+      "img": "img/team/01.jpg",
+      "name": "Dr. Aakash Mehta",
+      "job": "Medical Advisor"
+    },
+    {
+      "img": "img/team/03.jpg",
+      "name": "Neha Sharma",
+      "job": " Head of Product Development"
+    },
+    {
+      "img": "img/team/02.jpg",
+      "name": "Rohan Patel",
+      "job": "Operations & Supply Chain Manager"
+    },
+    {
+      "img": "img/team/04.jpg",
+      "name": "Priya Desai",
+      "job": "Customer Relations Manager"
+    }
+  ],
+  "Contact": {
+    "address": "Satellite Road, Ahmedabad, 380060 ",
+    "phone": "+91 9876543210",
+    "email": "info@surgencia.com",
+    "facebook": "fb.com",
+    "twitter": "twitter.com",
+    "youtube": "youtube.com"
+  },
+  "Features": [
+    {
+      "icon": "fa fa-comments-o",
+      "title": "Lorem ipsum",
+      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+    },
+    {
+      "icon": "fa fa-bullhorn",
+      "title": "Lorem ipsum",
+      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+    },
+    {
+      "icon": "fa fa-group",
+      "title": "Lorem ipsum",
+      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+    },
+    {
+      "icon": "fa fa-magic",
+      "title": "Lorem ipsum",
+      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+    }
+  ]
+}
