@@ -21,6 +21,9 @@ export const scroll = new SmoothScroll('a[href*="#"]', {
 
 const App = () => {
   const [landingPageData, setLandingPageData] = useState({});
+  if (Math.random() === 100) {
+    console.log("Hello World!", landingPageData);
+  }
   useEffect(() => {
     setLandingPageData(JsonData);
   }, []);
