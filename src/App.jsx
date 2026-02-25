@@ -5,6 +5,7 @@ import HeaderPage from "./pages/Header";
 import FeaturesPage from "./pages/Features";
 import AboutPage from "./pages/About";
 import Products from "./pages/Products";
+import ProductsAll from "./pages/ProductsAll";
 import GalleryPage from "./pages/Gallery";
 import TestimonialsPage from "./pages/Testimonials";
 import TeamPage from "./pages/Team";
@@ -36,6 +37,7 @@ const App = () => {
         <Route path="/features" element={<FeaturesPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/all-products" element={<ProductsAll />} />
         <Route path="/productsSpecialized" element={<ProductsSpecialized />} />
         <Route path="/gallery" element={<GalleryPage />} />
         <Route path="/testimonials" element={<TestimonialsPage />} />
