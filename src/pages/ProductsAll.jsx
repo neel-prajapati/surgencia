@@ -133,8 +133,11 @@ const ProductsAll = () => {
       <section id="products-all" className="products-all-page">
         <div className="container">
           <AnimatedSection animation="fadeUp">
+            <br />
+            <br />
+            <br />
             <div className="section-header">
-              <h1 className="page-title">Our Products</h1>
+              {/* <h1 className="page-title">Our Products</h1> */}
               <p className="page-subtitle">
                 Comprehensive range of medical supplies and surgical equipment for
                 healthcare professionals worldwide.

@@ -110,117 +110,43 @@ const categories = [
 const Products = () => {
   return (
     <PageTransition>
-      <div
-        style={{ padding: "80px 0", background: "#f5f7fa", minHeight: "100vh" }}
-      >
+      <div className="product-catalog-container">
         <AnimatedSection animation="fadeUp">
-          <h1
-            style={{
-              marginBottom: 32,
-              textAlign: "center",
-              fontWeight: 700,
-              color: "#1976d2",
-              letterSpacing: 1,
-            }}
-          >
+          <h1 className="product-catalog-title">
             Catalogue
           </h1>
         </AnimatedSection>
         <AnimatedSection animation="fadeUp" delay={0.1}>
-          <div
-            style={{
-              maxWidth: 800,
-              margin: "0 auto",
-              background: "#fff",
-              borderRadius: 16,
-              boxShadow: "0 4px 32px rgba(25, 118, 210, 0.08)",
-              padding: 40,
-            }}
-          >
+          <div className="product-catalog-wrapper">
             {categories.map((cat, idx) => (
               <div
                 key={cat.title}
-                style={{ marginBottom: idx < categories.length - 1 ? 40 : 0 }}
+                className="product-category-section"
               >
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    marginBottom: 18,
-                    borderRadius: 10,
-                    background:
-                      "linear-gradient(to right, #6372ff 0%, #5ca9fb 100%)",
-                    boxShadow: "0 2px 12px rgba(99,114,255,0.08)",
-                    padding: "14px 24px",
-                  }}
-                >
-              <span
-                style={{
-                  fontSize: 28,
-                  color: "#fff",
-                  marginRight: 14,
-                }}
-              >
-                <i className={categoryStyles[idx].icon}></i>
-              </span>
-              <h2
-                style={{
-                  fontWeight: 600,
-                  color: "#fff",
-                  margin: 0,
-                  fontSize: 22,
-                  letterSpacing: 1,
-                }}
-              >
-                {cat.title}
-              </h2>
-            </div>
-            <ul style={{ margin: 0, paddingLeft: 0, listStyle: "none" }}>
-              {cat.items.map((item) => (
-                <li
-                  key={item.code}
-                  style={{
-                    background: "#f5f7fa",
-                    borderRadius: 8,
-                    marginBottom: 14,
-                    padding: "16px 20px",
-                    boxShadow: "0 1px 6px rgba(25, 118, 210, 0.06)",
-                    display: "flex",
-                    alignItems: "center",
-                    transition:
-                      "box-shadow 0.2s, transform 0.2s, background 0.2s",
-                    cursor: "pointer",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.boxShadow =
-                      "0 4px 16px rgba(99,114,255,0.18)";
-                    e.currentTarget.style.transform =
-                      "translateY(-2px) scale(1.02)";
-                    e.currentTarget.style.background = "#e3e8ff";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.boxShadow =
-                      "0 1px 6px rgba(25, 118, 210, 0.06)";
-                    e.currentTarget.style.transform = "none";
-                    e.currentTarget.style.background = "#f5f7fa";
-                  }}
-                >
-                  <span
-                    style={{
-                      fontWeight: 600,
-                      color: categoryStyles[idx].color,
-                      fontSize: 16,
-                      marginRight: 16,
-                    }}
-                  >
-                    {item.code}
+                <div className="product-category-header">
+                  <span className="category-icon-wrapper">
+                    <i className={categoryStyles[idx].icon}></i>
                   </span>
-                  <span style={{ fontSize: 16 }}>{item.name}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+                  <h2>{cat.title}</h2>
+                </div>
+                <ul className="product-items-list">
+                  {cat.items.map((item) => (
+                    <li
+                      key={item.code}
+                      className="product-item"
+                    >
+                      <span
+                        className="product-code"
+                        style={{ color: categoryStyles[idx].color }}
+                      >
+                        {item.code}
+                      </span>
+                      <span className="product-name">{item.name}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </AnimatedSection>
       </div>
