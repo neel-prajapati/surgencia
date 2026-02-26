@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 import { Navigation } from "./components/navigation";
 import HeaderPage from "./pages/Header";
 import FeaturesPage from "./pages/Features";
@@ -20,6 +21,28 @@ export const scroll = new SmoothScroll('a[href*="#"]', {
   speedAsDuration: true,
 });
 
+// Animated Routes component to handle page transitions
+const AnimatedRoutes = () => {
+  const location = useLocation();
+  
+  return (
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<HeaderPage />} />
+        <Route path="/features" element={<FeaturesPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/all-products" element={<ProductsAll />} />
+        <Route path="/productsSpecialized" element={<ProductsSpecialized />} />
+        <Route path="/gallery" element={<GalleryPage />} />
+        <Route path="/testimonials" element={<TestimonialsPage />} />
+        <Route path="/team" element={<TeamPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
+    </AnimatePresence>
+  );
+};
+
 const App = () => {
   const [landingPageData, setLandingPageData] = useState({});
   if (Math.random() === 100) {
@@ -32,18 +55,7 @@ const App = () => {
   return (
     <Router>
       <Navigation />
-      <Routes>
-        <Route path="/" element={<HeaderPage />} />
-        <Route path="/features" element={<FeaturesPage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/all-products" element={<ProductsAll />} />
-        <Route path="/productsSpecialized" element={<ProductsSpecialized />} />
-        <Route path="/gallery" element={<GalleryPage />} />
-        <Route path="/testimonials" element={<TestimonialsPage />} />
-        <Route path="/team" element={<TeamPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-      </Routes>
+      <AnimatedRoutes />
     </Router>
   );
 };

@@ -1,5 +1,8 @@
 import React from "react";
+import { motion } from "framer-motion";
 import ProductCategory from "../components/ProductCategory";
+import PageTransition from "../components/PageTransition";
+import AnimatedSection from "../components/AnimatedSection";
 
 /**
  * Product categories data with icons and colors
@@ -8,7 +11,7 @@ const productCategories = [
   {
     id: "disposable-gloves",
     title: "Disposable Gloves",
-    icon: "fa fa-hand-paper-o",
+    icon: "fa fa-certificate",
     color: "#1976d2",
     description: "High-quality disposable gloves for medical and examination purposes.",
     items: [
@@ -17,32 +20,13 @@ const productCategories = [
         icon: "fa fa-medkit",
         subitems: ["Powdered", "Powder-Free", "Available in multiple sizes (S, M, L, XL)"],
       },
-      { name: "Nitrile Examination Gloves", icon: "fa fa-hand-rock-o" },
-      { name: "Latex Gloves", icon: "fa fa-hand-paper-o" },
-      { name: "Vinyl Gloves", icon: "fa fa-hand-peace-o" },
-      { name: "Plastic Gloves", icon: "fa fa-hand-pointer-o" },
+      { name: "Nitrile Examination Gloves", icon: "fa fa-check-circle" },
+      { name: "Latex Gloves", icon: "fa fa-dot-circle-o" },
+      { name: "Vinyl Gloves", icon: "fa fa-circle-thin" },
+      { name: "Plastic Gloves", icon: "fa fa-check-square-o" },
     ],
   },
-  {
-    id: "ppe",
-    title: "Personal Protective Equipment (PPE)",
-    icon: "fa fa-shield",
-    color: "#c62828",
-    description: "Complete range of personal protective equipment for healthcare professionals.",
-    items: [
-      { name: "N95 Mask", icon: "fa fa-filter" },
-      { name: "Face Shield", icon: "fa fa-user-circle" },
-      { name: "Medical Apron", icon: "fa fa-user-md" },
-      { name: "Disposable Lab Coat", icon: "fa fa-user" },
-      { name: "Disposable Surgical Gown", icon: "fa fa-user-plus" },
-      { name: "Shoe Cover (LD / Non-Woven)", icon: "fa fa-shoe-prints" },
-      { name: "Surgeon Cap (Disposable)", icon: "fa fa-graduation-cap" },
-      { name: "Disposable Bouffant Cap", icon: "fa fa-circle" },
-      { name: "Face Mask", icon: "fa fa-user-secret" },
-      { name: "Beard Mask", icon: "fa fa-user" },
-      { name: "Hand Sleeve", icon: "fa fa-hand-paper-o" },
-    ],
-  },
+ 
   {
     id: "drape",
     title: "Drape (MD Class-2)",
@@ -71,18 +55,38 @@ const productCategories = [
       { name: "Urine Container", icon: "fa fa-flask" },
     ],
   },
+   {
+    id: "ppe",
+    title: "Personal Protective Equipment (PPE)",
+    icon: "fa fa-shield",
+    color: "#c62828",
+    description: "Complete range of personal protective equipment for healthcare professionals.",
+    items: [
+      { name: "N95 Mask", icon: "fa fa-filter" },
+      { name: "Face Shield", icon: "fa fa-bookmark-o" },
+      { name: "Medical Apron", icon: "fa fa-user-md" },
+      { name: "Disposable Lab Coat", icon: "fa fa-user" },
+      { name: "Disposable Surgical Gown", icon: "fa fa-user-plus" },
+      { name: "Shoe Cover (LD / Non-Woven)", icon: "fa fa-level-down" },
+      { name: "Surgeon Cap (Disposable)", icon: "fa fa-graduation-cap" },
+      { name: "Disposable Bouffant Cap", icon: "fa fa-circle-o" },
+      { name: "Face Mask", icon: "fa fa-user-secret" },
+      { name: "Beard Mask", icon: "fa fa-male" },
+      { name: "Hand Sleeve", icon: "fa fa-arrows-v" },
+    ],
+  },
   {
     id: "surgical-dressing",
     title: "Surgical Dressing Products",
-    icon: "fa fa-bandcamp",
+    icon: "fa fa-plus-square",
     color: "#f57c00",
     description: "Wound care and surgical dressing solutions.",
     items: [
       { name: "Sterile Gauze Pads", icon: "fa fa-square-o" },
-      { name: "Adhesive Bandages", icon: "fa fa-band-aid" },
-      { name: "Surgical Tape", icon: "fa fa-tape" },
+      { name: "Adhesive Bandages", icon: "fa fa-bookmark" },
+      { name: "Surgical Tape", icon: "fa fa-minus-square" },
       { name: "Cotton Rolls", icon: "fa fa-circle" },
-      { name: "Wound Dressings", icon: "fa fa-plus-square" },
+      { name: "Wound Dressings", icon: "fa fa-plus-square-o" },
     ],
   },
   {
@@ -101,32 +105,65 @@ const productCategories = [
 ];
 
 const ProductsAll = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: [0.25, 0.46, 0.45, 0.94],
+      },
+    },
+  };
+
   return (
-    <section id="products-all" className="products-all-page">
-      <div className="container">
-        <div className="section-header">
-          <h1 className="page-title">Our Products</h1>
-          <p className="page-subtitle">
-            Comprehensive range of medical supplies and surgical equipment for
-            healthcare professionals worldwide.
-          </p>
+    <PageTransition>
+      <section id="products-all" className="products-all-page">
+        <div className="container">
+          <AnimatedSection animation="fadeUp">
+            <div className="section-header">
+              <h1 className="page-title">Our Products</h1>
+              <p className="page-subtitle">
+                Comprehensive range of medical supplies and surgical equipment for
+                healthcare professionals worldwide.
+              </p>
+            </div>
+          </AnimatedSection>
+
+          <motion.div
+            className="products-grid"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+          >
+            {productCategories.map((category) => (
+              <motion.div key={category.id} variants={itemVariants}>
+                <ProductCategory
+                  title={category.title}
+                  icon={category.icon}
+                  color={category.color}
+                  items={category.items}
+                  description={category.description}
+                />
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
 
-        <div className="products-grid">
-          {productCategories.map((category) => (
-            <ProductCategory
-              key={category.id}
-              title={category.title}
-              icon={category.icon}
-              color={category.color}
-              items={category.items}
-              description={category.description}
-            />
-          ))}
-        </div>
-      </div>
-
-      <style>{`
+        <style>{`
         .products-all-page {
           padding: 100px 0 60px;
           background: linear-gradient(180deg, #f5f7fa 0%, #e8ecf1 100%);
@@ -141,7 +178,7 @@ const ProductsAll = () => {
 
         .section-header {
           text-align: center;
-          margin-bottom: 50px;
+          margin-bottom: 35px;
         }
 
         .page-title {
@@ -165,8 +202,9 @@ const ProductsAll = () => {
 
         .products-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-          gap: 30px;
+          grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+          gap: 20px;
+          align-items: start;
         }
 
         /* Product Category Styles */
@@ -176,6 +214,9 @@ const ProductsAll = () => {
           box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
           overflow: hidden;
           transition: transform 0.3s ease, box-shadow 0.3s ease;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
         }
 
         .product-category:hover {
@@ -186,18 +227,18 @@ const ProductsAll = () => {
         .category-header {
           display: flex;
           align-items: center;
-          padding: 20px 24px;
+          padding: 16px 20px;
           color: #fff;
         }
 
         .category-icon {
-          font-size: 28px;
-          margin-right: 14px;
+          font-size: 24px;
+          margin-right: 12px;
           opacity: 0.9;
         }
 
         .category-title {
-          font-size: 20px;
+          font-size: 18px;
           font-weight: 600;
           margin: 0;
           color: #fff;
@@ -205,9 +246,9 @@ const ProductsAll = () => {
         }
 
         .category-description {
-          padding: 16px 24px 8px;
+          padding: 12px 20px 8px;
           color: #666;
-          font-size: 14px;
+          font-size: 13px;
           line-height: 1.5;
           margin: 0;
           border-bottom: 1px solid #f0f0f0;
@@ -215,12 +256,13 @@ const ProductsAll = () => {
 
         .category-items {
           list-style: none;
-          padding: 16px 24px;
+          padding: 12px 20px;
           margin: 0;
+          flex: 1;
         }
 
         .category-item {
-          padding: 12px 0;
+          padding: 10px 0;
           border-bottom: 1px solid #f5f5f5;
         }
 
@@ -234,8 +276,8 @@ const ProductsAll = () => {
         }
 
         .item-icon {
-          font-size: 16px;
-          margin-right: 12px;
+          font-size: 14px;
+          margin-right: 10px;
           margin-top: 2px;
           opacity: 0.8;
         }
@@ -245,21 +287,21 @@ const ProductsAll = () => {
         }
 
         .item-name {
-          font-size: 15px;
+          font-size: 14px;
           color: #333;
           font-weight: 500;
         }
 
         .sub-items {
           list-style: none;
-          padding: 8px 0 0 0;
+          padding: 6px 0 0 0;
           margin: 0;
         }
 
         .sub-item {
-          font-size: 13px;
+          font-size: 12px;
           color: #666;
-          padding: 6px 0;
+          padding: 4px 0;
           display: flex;
           align-items: center;
         }
@@ -280,23 +322,7 @@ const ProductsAll = () => {
 
           .products-grid {
             grid-template-columns: 1fr;
-            gap: 20px;
-          }
-
-          .category-header {
-            padding: 16px 20px;
-          }
-
-          .category-icon {
-            font-size: 24px;
-          }
-
-          .category-title {
-            font-size: 18px;
-          }
-
-          .category-items {
-            padding: 12px 20px;
+            gap: 16px;
           }
         }
 
@@ -318,7 +344,8 @@ const ProductsAll = () => {
           }
         }
       `}</style>
-    </section>
+      </section>
+    </PageTransition>
   );
 };
 

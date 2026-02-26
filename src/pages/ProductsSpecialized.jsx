@@ -1,4 +1,6 @@
 import React from "react";
+import PageTransition from "../components/PageTransition";
+import AnimatedSection from "../components/AnimatedSection";
 const products = [
   {
     id: "CAAN100PS",
@@ -74,25 +76,29 @@ const firstTdStyle = {
 };
 const ProductsSpecialized = () => {
   return (
-    <div
-      style={{ padding: "80px 0", background: "#f5f7fa", minHeight: "100vh" }}
-    >
-      <div style={{ maxWidth: 900, margin: "60px auto", padding: "0 16px" }}>
-        <h1
-          style={{
-            textAlign: "center",
-            fontWeight: 700,
-            color: "#6372ff",
-            marginBottom: 32,
-            letterSpacing: 1,
-          }}
-        >
-          Specialized Product Details
-        </h1>
-        {products.map((product, idx) => (
-          <table style={tableStyle} key={product.id}>
-            <tbody>
-              <tr>
+    <PageTransition>
+      <div
+        style={{ padding: "80px 0", background: "#f5f7fa", minHeight: "100vh" }}
+      >
+        <div style={{ maxWidth: 900, margin: "60px auto", padding: "0 16px" }}>
+          <AnimatedSection animation="fadeUp">
+            <h1
+              style={{
+                textAlign: "center",
+                fontWeight: 700,
+                color: "#6372ff",
+                marginBottom: 32,
+                letterSpacing: 1,
+              }}
+            >
+              Specialized Product Details
+            </h1>
+          </AnimatedSection>
+          {products.map((product, idx) => (
+            <AnimatedSection key={product.id} animation="fadeUp" delay={idx * 0.1}>
+              <table style={tableStyle}>
+                <tbody>
+                  <tr>
                 <th style={thStyle}>Product ID</th>
                 <td style={firstTdStyle}>{product.id}</td>
               </tr>
@@ -138,9 +144,11 @@ const ProductsSpecialized = () => {
               </tr>
             </tbody>
           </table>
+            </AnimatedSection>
         ))}
       </div>
     </div>
+    </PageTransition>
   );
 };
 

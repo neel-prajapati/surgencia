@@ -1,31 +1,69 @@
 import { Image } from "./image";
 import React from "react";
+import { motion } from "framer-motion";
 
 export const Gallery = (props) => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.08,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.4,
+        ease: [0.25, 0.46, 0.45, 0.94],
+      },
+    },
+  };
+
   return (
     <div id="portfolio" className="text-center">
       <div className="container">
-        <div className="section-title">
+        <motion.div
+          className="section-title"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6 }}
+        >
           <h2>Gallery</h2>
           <p>Here, photos will be needed to showcase surgical drapes</p>
-        </div>
+        </motion.div>
         <div className="row">
-          <div className="portfolio-items">
+          <motion.div
+            className="portfolio-items"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+          >
             {props.data
               ? props.data.map((d, i) => (
-                  <div
+                  <motion.div
                     key={`${d.title}-${i}`}
                     className="col-sm-6 col-md-4 col-lg-4"
+                    variants={itemVariants}
+                    whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
                   >
                     <Image
                       title={d.title}
                       largeImage={d.largeImage}
                       smallImage={d.smallImage}
                     />
-                  </div>
+                  </motion.div>
                 ))
               : "Loading..."}
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

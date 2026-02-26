@@ -1,4 +1,6 @@
 import React from "react";
+import PageTransition from "../components/PageTransition";
+import AnimatedSection from "../components/AnimatedSection";
 
 const categoryStyles = [
   { color: "#1976d2", icon: "fa fa-eye" },
@@ -107,47 +109,51 @@ const categories = [
 
 const Products = () => {
   return (
-    <div
-      style={{ padding: "80px 0", background: "#f5f7fa", minHeight: "100vh" }}
-    >
-      <h1
-        style={{
-          marginBottom: 32,
-          textAlign: "center",
-          fontWeight: 700,
-          color: "#1976d2",
-          letterSpacing: 1,
-        }}
-      >
-        Catalogue
-      </h1>
+    <PageTransition>
       <div
-        style={{
-          maxWidth: 800,
-          margin: "0 auto",
-          background: "#fff",
-          borderRadius: 16,
-          boxShadow: "0 4px 32px rgba(25, 118, 210, 0.08)",
-          padding: 40,
-        }}
+        style={{ padding: "80px 0", background: "#f5f7fa", minHeight: "100vh" }}
       >
-        {categories.map((cat, idx) => (
-          <div
-            key={cat.title}
-            style={{ marginBottom: idx < categories.length - 1 ? 40 : 0 }}
+        <AnimatedSection animation="fadeUp">
+          <h1
+            style={{
+              marginBottom: 32,
+              textAlign: "center",
+              fontWeight: 700,
+              color: "#1976d2",
+              letterSpacing: 1,
+            }}
           >
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                marginBottom: 18,
-                borderRadius: 10,
-                background:
-                  "linear-gradient(to right, #6372ff 0%, #5ca9fb 100%)",
-                boxShadow: "0 2px 12px rgba(99,114,255,0.08)",
-                padding: "14px 24px",
-              }}
-            >
+            Catalogue
+          </h1>
+        </AnimatedSection>
+        <AnimatedSection animation="fadeUp" delay={0.1}>
+          <div
+            style={{
+              maxWidth: 800,
+              margin: "0 auto",
+              background: "#fff",
+              borderRadius: 16,
+              boxShadow: "0 4px 32px rgba(25, 118, 210, 0.08)",
+              padding: 40,
+            }}
+          >
+            {categories.map((cat, idx) => (
+              <div
+                key={cat.title}
+                style={{ marginBottom: idx < categories.length - 1 ? 40 : 0 }}
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    marginBottom: 18,
+                    borderRadius: 10,
+                    background:
+                      "linear-gradient(to right, #6372ff 0%, #5ca9fb 100%)",
+                    boxShadow: "0 2px 12px rgba(99,114,255,0.08)",
+                    padding: "14px 24px",
+                  }}
+                >
               <span
                 style={{
                   fontSize: 28,
@@ -215,8 +221,10 @@ const Products = () => {
             </ul>
           </div>
         ))}
+          </div>
+        </AnimatedSection>
       </div>
-    </div>
+    </PageTransition>
   );
 };
 
