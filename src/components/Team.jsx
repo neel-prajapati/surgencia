@@ -29,23 +29,27 @@ export const Team = (props) => {
   return (
     <div id="team" className="text-center">
       <div className="container">
-        <motion.div
-          className="col-md-8 col-md-offset-2 section-title"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2>Meet the Team</h2>
-          <p>
-            At Surgencia, our strength lies in the people behind the innovation.
-            Our team of experienced professionals is dedicated to delivering
-            safe, reliable, and high-quality surgical drape solutions that
-            healthcare providers can trust.
-          </p>
-        </motion.div>
+        <div className="row">
+          <motion.div
+            className="col-md-8 col-md-offset-2 section-title"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2>Meet the Team</h2>
+            <p>
+              At Surgencia, our strength lies in the people behind the innovation.
+              Our team of experienced professionals is dedicated to delivering
+              safe, reliable, and high-quality surgical drape solutions that
+              healthcare providers can trust.
+            </p>
+          </motion.div>
+        </div>
         <motion.div
           id="row"
+          className="row"
+          style={{ display: "flex", justifyContent: "center", flexWrap: "wrap" }}
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"

@@ -96,24 +96,7 @@ export const Navigation = (props) => {
                 Products
               </Link>
             </li>
-            <li>
-              <Link
-                to="/products"
-                className="page-scroll"
-                onClick={handleNavClick}
-              >
-                Drape Kits
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/productsSpecialized"
-                className="page-scroll"
-                onClick={handleNavClick}
-              >
-                Specialized Drape Kits
-              </Link>
-            </li>
+           
             <li>
               <Link
                 to="/gallery"

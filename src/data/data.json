@@ -113,23 +113,13 @@
   "Team": [
     {
       "img": "img/team/01.jpg",
-      "name": "Dr. Aakash Mehta",
-      "job": "Medical Advisor"
+      "name": "Mr. Sanket Patel",
+      "job": "CEO & Founder"
     },
     {
       "img": "img/team/03.jpg",
-      "name": "Neha Sharma",
-      "job": " Head of Product Development"
-    },
-    {
-      "img": "img/team/02.jpg",
-      "name": "Rohan Patel",
-      "job": "Operations & Supply Chain Manager"
-    },
-    {
-      "img": "img/team/04.jpg",
-      "name": "Priya Desai",
-      "job": "Customer Relations Manager"
+      "name": "Ms. Shimona Shah",
+      "job": " Director"
     }
   ],
   "Contact": {
@@ -166,7 +156,7 @@
     {
       "id": "disposable-gloves",
       "title": "Disposable Gloves",
-      "icon": "fa fa-hand-paper-o",
+      "icon": "fa fa-chevron-right",
       "color": "#1976d2",
       "description": "High-quality disposable gloves for medical and examination purposes.",
       "items": [

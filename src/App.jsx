@@ -7,6 +7,8 @@ import FeaturesPage from "./pages/Features";
 import AboutPage from "./pages/About";
 import Products from "./pages/Products";
 import ProductsAll from "./pages/ProductsAll";
+import ProductDetail from "./pages/ProductDetail";
+import ProductItemDetail from "./pages/ProductItemDetail";
 import GalleryPage from "./pages/Gallery";
 import TestimonialsPage from "./pages/Testimonials";
 import TeamPage from "./pages/Team";
@@ -33,6 +35,8 @@ const AnimatedRoutes = () => {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/products" element={<Products />} />
         <Route path="/all-products" element={<ProductsAll />} />
+        <Route path="/products/:id" element={<ProductDetail />} />
+        <Route path="/products/:categoryId/:itemId" element={<ProductItemDetail />} />
         <Route path="/productsSpecialized" element={<ProductsSpecialized />} />
         <Route path="/gallery" element={<GalleryPage />} />
         <Route path="/testimonials" element={<TestimonialsPage />} />
