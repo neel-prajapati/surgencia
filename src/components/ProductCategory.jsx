@@ -52,6 +52,7 @@ const ProductCategory = ({ categoryId, title, icon, color, items, description })
               </span>
               <div className="item-details">
                 <span className="item-name">{item.name}</span>
+                <span>{item?.isNew?<img src="/img/new-star.gif" alt="New" className="new-badge" width={45} />:<></>}</span>
                 {item.subitems && item.subitems.length > 0 && (
                   <ul className="sub-items">
                     {item.subitems.map((subitem, subIdx) => (

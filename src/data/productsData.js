@@ -56,6 +56,80 @@ export const productCategories = [
         description:
           "Lightweight disposable polyethylene plastic gloves designed for hygienic, single-use applications. These loose-fitting gloves are ideal for catering, food preparation, and basic patient care tasks where frequent glove changes are required. They provide a quick-to-don, cost-effective protective barrier for low-risk environments.",
       },
+      
+  {
+    "id": "latex-surgical-gloves",
+    "name": "Latex Surgical Gloves",
+    "category": "Medical Gloves",
+    "icon": "fa fa-hand-paper",
+    "image": "",
+    "isNew": true,
+    "description": "Premium sterile latex surgical gloves designed for critical procedures. Offers superior grip, perfect ergonomic fit, and ultra-sensitive tactile precision for surgical accuracy."
+  },
+  {
+    "id": "latex-surgical-gloves-powdered",
+    "name": "Latex Surgical Gloves (Powdered)",
+    "category": "Medical Gloves",
+    "icon": "fa fa-hand-paper",
+    "image": "",
+    "isNew": true,
+    "description": "Sterile powdered latex surgical gloves providing easy donning, enhanced grip, and reliable barrier protection during surgical procedures."
+  },
+  {
+    "id": "latex-surgical-gloves-powder-free",
+    "name": "Latex Surgical Gloves (Powder-Free)",
+    "category": "Medical Gloves",
+    "icon": "fa fa-hand-paper",
+    "image": "",
+    "isNew": true,
+    "description": "Powder-free latex surgical gloves offering reduced allergy risk, high tactile sensitivity, and excellent fit for precision procedures."
+  },
+  {
+    "id": "latex-examination-gloves",
+    "name": "Latex Examination Gloves",
+    "category": "Medical Gloves",
+    "icon": "fa fa-hand-paper",
+    "image": "",
+    "isNew": true,
+    "description": "Soft and stretchable latex examination gloves designed for general medical use, offering high sensitivity and comfortable fit."
+  },
+  {
+    "id": "latex-exam-gloves-powdered",
+    "name": "Latex Examination Gloves (Powdered)",
+    "category": "Medical Gloves",
+    "icon": "fa fa-hand-paper",
+    "image": "",
+    "isNew": true,
+    "description": "Powdered latex examination gloves for smooth donning, flexibility, and reliable protection in routine medical procedures."
+  },
+  {
+    "id": "latex-exam-gloves-powder-free",
+    "name": "Latex Examination Gloves (Powder-Free)",
+    "category": "Medical Gloves",
+    "icon": "fa fa-hand-paper",
+    "image": "",
+    "isNew": true,
+    "description": "Powder-free latex examination gloves providing enhanced comfort, reduced irritation risk, and superior tactile performance."
+  },
+  {
+    "id": "nitrile-examination-gloves",
+    "name": "Nitrile Examination Gloves",
+    "category": "Medical Gloves",
+    "icon": "fa fa-hand-paper",
+    "image": "",
+    "isNew": true,
+    "description": "Latex-free nitrile gloves offering strong durability, chemical resistance, and excellent barrier protection for high-risk environments."
+  },
+  {
+    "id": "nitrile-exam-gloves-powder-free",
+    "name": "Nitrile Examination Gloves (Powder-Free)",
+    "category": "Medical Gloves",
+    "icon": "fa fa-hand-paper",
+    "image": "",
+    "isNew": true,
+    "description": "Powder-free nitrile examination gloves designed for allergy-safe use, providing superior strength, grip, and protection."
+  }
+
     ],
   },
   {
@@ -190,6 +264,297 @@ export const productCategories = [
         description:
           "Complete sterile barrier systems (SBS) for the packaging and protection of sterile medical devices and instruments prior to use. Manufactured in accordance with ISO 11607-1 and -2 standards, these systems maintain device sterility throughout transport, storage, and point-of-use presentation. Available as pouches, reels, and rigid trays with peel-apart seals for aseptic opening.",
       },
+      
+      {
+        "id": "basic-surgical-gown",
+        "name": "Basic Surgical Gown",
+        "category": "Surgical Gowns",
+        "icon": "fa fa-user-md",
+        image: "/img/products/surgical-gown.JPG",
+    
+    "isNew":true,
+    "description": "Standard surgical gown designed for basic protection with multiple size options and bulk packaging."
+  },
+  {
+    "id": "half-surgical-gown",
+    "name": "Half Surgical Gown",
+    "category": "Surgical Gowns",
+    "icon": "fa fa-user-md",
+    "image": "",
+    "isNew":true,
+    "description": "Lightweight half-body surgical gown ideal for low-risk procedures and comfort."
+  },
+  {
+    "id": "isolation-gown-level-1",
+    "name": "Isolation Gown (Level 1)",
+    "category": "Surgical Gowns",
+    "icon": "fa fa-user-md",
+    "image": "",
+    "isNew":true,
+    "description": "Provides minimal protection for low-risk environments with basic fluid resistance."
+  },
+  {
+    "id": "disposable-plastic-gown",
+    "name": "Disposable Plastic Gown",
+    "category": "Surgical Gowns",
+    "icon": "fa fa-user-md",
+    "image": "",
+    "isNew":true,
+    "description": "Single-use plastic gown designed for quick protection in low-exposure scenarios."
+  },
+  {
+    "id": "economy-surgical-gown",
+    "name": "Economy Surgical Gown",
+    "category": "Surgical Gowns",
+    "icon": "fa fa-user-md",
+    "image": "",
+    "isNew":true,
+    "description": "Cost-effective surgical gown suitable for general procedures."
+  },
+  {
+    "id": "open-back-surgical-gown",
+    "name": "Open Back Surgical Gown",
+    "category": "Surgical Gowns",
+    "icon": "fa fa-user-md",
+    "image": "",
+    "isNew":true,
+    "description": "Designed for enhanced ventilation and ease of wear with open-back structure."
+  },
+  {
+    "id": "non-woven-surgical-gown",
+    "name": "Non-Woven Surgical Gown (Polypropylene)",
+    "category": "Surgical Gowns",
+    "icon": "fa fa-user-md",
+    "image": "",
+    "isNew":true,
+    "description": "Breathable non-woven gown providing low to moderate fluid protection."
+  },
+  {
+    "id": "laminated-surgical-gown",
+    "name": "PP + PE Laminated Surgical Gown",
+    "category": "Surgical Gowns",
+    "icon": "fa fa-user-md",
+    "image": "",
+    "isNew":true,
+    "description": "Enhanced barrier protection with laminated layers for fluid resistance."
+  },
+  {
+    "id": "thumb-loop-gown",
+    "name": "Disposable Surgical Gown with Thumb Loops",
+    "category": "Surgical Gowns",
+    "icon": "fa fa-user-md",
+    "image": "",
+    "isNew":true,
+    "description": "Ergonomic design with thumb loops for secure sleeve positioning."
+  },
+  {
+    "id": "reinforced-wraparound-gown",
+    "name": "Wraparound Surgical Gown (Reinforced)",
+    "category": "Surgical Gowns",
+    "icon": "fa fa-user-md",
+    "image": "",
+    "isNew":true,
+    "description": "Reinforced gown offering higher protection for moderate to high exposure."
+  },
+  {
+    "id": "pediatric-surgical-gown",
+    "name": "Pediatric Surgical Gown",
+    "category": "Surgical Gowns",
+    "icon": "fa fa-user-md",
+    "image": "",
+    "isNew":true,
+    "description": "Specially designed gown for pediatric surgical procedures."
+  },
+  {
+    "id": "maternity-surgical-gown",
+    "name": "Maternity Surgical Gown",
+    "category": "Surgical Gowns",
+    "icon": "fa fa-user-md",
+    "image": "",
+    "isNew":true,
+    "description": "Tailored for maternity procedures ensuring comfort and safety."
+  },
+  {
+    "id": "reusable-surgical-gown",
+    "name": "Reusable Surgical Gown",
+    "category": "Surgical Gowns",
+    "icon": "fa fa-user-md",
+    "image": "",
+    "isNew":true,
+    "description": "Durable and washable gown designed for repeated use."
+  },
+  {
+    "id": "impervious-surgical-gown",
+    "name": "Impervious Surgical Gown",
+    "category": "Surgical Gowns",
+    "icon": "fa fa-user-md",
+    "image": "",
+    "isNew":true,
+    "description": "Maximum protection gown resistant to fluids and pathogens."
+  },
+  {
+    "id": "viral-barrier-gown",
+    "name": "Breathable Viral Barrier Surgical Gown",
+    "category": "Surgical Gowns",
+    "icon": "fa fa-user-md",
+    "image": "",
+    "isNew":true,
+    "description": "High-performance breathable gown with viral barrier protection."
+  },
+  {
+    "id": "absorbent-towel",
+    "name": "Absorbent Drape Towel",
+    "category": "Drapes & Accessories",
+    "icon": "fa fa-cloth",
+    "image": "",
+    "isNew":true,
+    "description": "High absorbency towel used in surgical environments."
+  },
+  {
+    "id": "drape-towel-adhesive",
+    "name": "Drape Towel with Adhesive Strip",
+    "category": "Drapes & Accessories",
+    "icon": "fa fa-cloth",
+    "image": "",
+    "isNew":true,
+    "description": "Sterile towel with adhesive backing for secure placement."
+  },
+  {
+    "id": "drape-sheet",
+    "name": "Surgical Drape Sheet",
+    "category": "Drapes & Accessories",
+    "icon": "fa fa-cloth",
+    "image": "",
+    "isNew":true,
+    "description": "Sterile sheet used for covering patients during procedures."
+  },
+  {
+    "id": "under-buttocks-drape",
+    "name": "Under-Buttocks Drape",
+    "category": "Drapes & Accessories",
+    "icon": "fa fa-cloth",
+    "image": "",
+    "isNew":true,
+    "description": "Specialized drape with fluid collection pouch for procedures."
+  },
+  {
+    "id": "leggings-drape",
+    "name": "Surgical Leggings Drape",
+    "category": "Drapes & Accessories",
+    "icon": "fa fa-cloth",
+    "image": "",
+    "isNew":true,
+    "description": "Protective leggings used in surgical procedures."
+  },
+  {
+    "id": "stockinette",
+    "name": "Stockinette",
+    "category": "Drapes & Accessories",
+    "icon": "fa fa-cloth",
+    "image": "",
+    "isNew":true,
+    "description": "Tubular fabric used to cover limbs during procedures."
+  },
+  {
+    "id": "angiography-drape",
+    "name": "Angiography Drape",
+    "category": "Specialty Drapes",
+    "icon": "fa fa-heartbeat",
+    "image": "",
+    "isNew":true,
+    "description": "Designed for angiography procedures with fluid control and access points."
+  },
+  {
+    "id": "cardiovascular-drape",
+    "name": "Cardiovascular Drape",
+    "category": "Specialty Drapes",
+    "icon": "fa fa-heartbeat",
+    "image": "",
+    "isNew":true,
+    "description": "Specialized drape for cardiovascular surgeries with reinforcement zones."
+  },
+  {
+    "id": "central-line-drape",
+    "name": "Central Line Drape",
+    "category": "Specialty Drapes",
+    "icon": "fa fa-heartbeat",
+    "image": "",
+    "isNew":true,
+    "description": "Sterile drape designed for central line insertion procedures."
+  },
+  {
+    "id": "cystoscopy-drape",
+    "name": "Cystoscopy Drape",
+    "category": "Specialty Drapes",
+    "icon": "fa fa-heartbeat",
+    "image": "",
+    "isNew":true,
+    "description": "Designed for urological procedures with fluid management features."
+  },
+  {
+    "id": "laparotomy-drape",
+    "name": "Laparotomy Drape",
+    "category": "Specialty Drapes",
+    "icon": "fa fa-heartbeat",
+    "image": "",
+    "isNew":true,
+    "description": "Used in abdominal surgeries with reinforced and fenestrated design."
+  },
+  {
+    "id": "neurosurgery-drape",
+    "name": "Neurosurgery Drape",
+    "category": "Specialty Drapes",
+    "icon": "fa fa-heartbeat",
+    "image": "",
+    "isNew":true,
+    "description": "Advanced drape for neurological procedures with precision openings."
+  },
+  {
+    "id": "cardiovascular-pack",
+    "name": "Cardiovascular Pack",
+    "category": "Surgical Packs",
+    "icon": "fa fa-box",
+    "image": "",
+    "isNew":true,
+    "description": "Complete sterile pack designed for cardiovascular procedures."
+  },
+  {
+    "id": "universal-pack",
+    "name": "Universal Drape Pack",
+    "category": "Surgical Packs",
+    "icon": "fa fa-box",
+    "image": "",
+    "isNew":true,
+    "description": "Multi-purpose surgical pack suitable for various procedures."
+  },
+  {
+    "id": "setup-pack",
+    "name": "Setup Pack",
+    "category": "Surgical Packs",
+    "icon": "fa fa-box",
+    "image": "",
+    "isNew":true,
+    "description": "Basic setup pack containing essential surgical items."
+  },
+  {
+    "id": "laparotomy-pack",
+    "name": "Laparotomy Pack",
+    "category": "Surgical Packs",
+    "icon": "fa fa-box",
+    "image": "",
+    "isNew":true,
+    "description": "Procedure-specific pack designed for laparotomy surgeries."
+  },
+  {
+    "id": "cystoscopy-pack",
+    "name": "Cystoscopy Pack",
+    "category": "Surgical Packs",
+    "icon": "fa fa-box",
+    "image": "",
+    "isNew":true,
+    "description": "Specialized pack for cystoscopy procedures."
+  }
+
     ],
   },
   {
